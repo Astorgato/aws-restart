@@ -1,0 +1,20 @@
+
+
+def Primos_hasta(num=250):
+    Primos = []
+    No_Primos = []
+    for i in range(num):
+        Es_Primo = True
+        if i == 1:
+            Es_Primo = False
+        elif i == 2:
+            Primos.append(i)
+        elif i >2:
+            for primo in Primos:
+                if i%primo == 0:
+                    Es_Primo = False
+        elif Es_Primo == True:
+            Primos.append(i)
+    return(Primos)
+    
+Primos_hasta(250)
